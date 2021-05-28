@@ -27,11 +27,12 @@ public class ClassRoomController {
     public ResponseEntity<HttpStatus> deleteTutorial(@PathVariable("id") long id) {
         try {
             classRoomRepository.deleteById(id);
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-    } catch (Exception e) {
-        return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+        catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
-}
 //PUT	/api/tutorials/:id		update a Tutorial by :id
     @PutMapping("/classroom/{id}")
     public ResponseEntity<ClassRoom> updateTutorial(@PathVariable("id") long id, @RequestBody ClassRoom classRoom) {
