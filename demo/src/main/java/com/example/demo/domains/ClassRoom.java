@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Table(name = "ClassRoom")
 public class ClassRoom {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+ //   @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
     private Long id;
 
@@ -14,7 +14,10 @@ public class ClassRoom {
     private String className;
 
     public ClassRoom() {
+    }
 
+    public ClassRoom(String className) {
+        this.className = className;
     }
 
     public Long getId() {
