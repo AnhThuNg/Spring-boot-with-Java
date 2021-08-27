@@ -2,14 +2,12 @@ server:
   port: 8080
 spring:
   datasource:
-    url: jdbc:sqlserver://localhost:1434;databaseName=Student
+    url: jdbc:sqlserver://NTHIANHTHU\SQLEXPRESS:1434;databaseName=Student
     username: sa
     password: sa2018@anhthu
   jpa:
     hibernate:
       ddl-auto: none
-      naming:
-        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     show-sql: true
     properties:
       hibernate:

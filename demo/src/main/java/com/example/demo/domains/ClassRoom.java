@@ -13,11 +13,12 @@ public class ClassRoom {
     @Column(name = "className", length = 50, nullable = false)
     private String className;
 
-    public ClassRoom() {
-    }
-
     public ClassRoom(String className) {
         this.className = className;
+    }
+
+    public ClassRoom() {
+
     }
 
     public Long getId() {
